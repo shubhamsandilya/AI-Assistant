@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+// App.jsx
+import React from "react";
+// import AssistantWindow from "@beakjs"; //
+import { Beak, AssistantWindow } from "@beakjs/react";
+import Homepage from "./Pages/Homepage"; // Your main app component
+// import AssistantWindow from "@beakjs"; //
+import Gemeni from "./Pages/Gemeni";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <Beak
+    __unsafeOpenAIApiKey__="sk-proj-EWnIcQwGhhefP7zOLNGTT3BlbkFJsBdoRhzI2NgFI7YUNtQX"
+    instructions="Assistant is running in a web app and helps the user with XYZ."
+    labels={{
+      initial: "Hi you! 👋 I can give you a presentation on any topic.",
+      thinking: "Presenting Slide...",
+      done: "✅ Slide presented.",
+    }}
+    // model="gpt-3.5"
+  >
+    <Homepage />
+    <AssistantWindow />
+  </Beak>
+
+  // <Gemeni /> // Google Generative AI
+);
 
 export default App;
