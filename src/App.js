@@ -8,7 +8,7 @@ import Gemeni from "./Pages/Gemeni";
 
 const App = () => (
   <Beak
-    __unsafeOpenAIApiKey__="sk-proj-EWnIcQwGhhefP7zOLNGTT3BlbkFJsBdoRhzI2NgFI7YUNtQX"
+    __unsafeOpenAIApiKey__="YOUR_API_KEY"
     instructions="Assistant is running in a web app and helps the user with XYZ."
     labels={{
       initial: "Hi you! 👋 I can give you a presentation on any topic.",
